@@ -1,4 +1,4 @@
-from bluepy.btle import UUID, Peripheral, ADDR_TYPE_RANDOM, DefaultDelegate
+from bluepy_mjg59.btle import UUID, Peripheral, ADDR_TYPE_RANDOM, DefaultDelegate
 import argparse
 import time
 import binascii

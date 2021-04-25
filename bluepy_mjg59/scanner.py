@@ -2,7 +2,7 @@
 from __future__ import print_function
 
 from time import gmtime, strftime, sleep
-from bluepy.btle import Scanner, DefaultDelegate, BTLEException
+from bluepy_mjg59.btle import Scanner, DefaultDelegate, BTLEException
 import sys
 
 

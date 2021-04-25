@@ -1,4 +1,4 @@
-from bluepy.btle import UUID, Peripheral, DefaultDelegate, AssignedNumbers
+from bluepy_mjg59.btle import UUID, Peripheral, DefaultDelegate, AssignedNumbers
 import struct
 import math
 

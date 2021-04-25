@@ -4,7 +4,7 @@ import argparse
 import binascii
 import os
 import sys
-from bluepy import btle
+from bluepy_mjg59 import btle
 
 if os.getenv('C', '1') == '0':
     ANSI_RED = ''

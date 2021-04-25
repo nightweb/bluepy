@@ -13,9 +13,9 @@ def pre_install():
     """Do the custom compiling of the bluepy-helper executable from the makefile"""
     try:
         print("Working dir is " + os.getcwd())
-        with open("bluepy/version.h","w") as verfile:
+        with open("bluepy_mjg59/version.h","w") as verfile:
             verfile.write('#define VERSION_STRING "%s"\n' % VERSION)
-        for cmd in [ "make -C ./bluepy clean", "make -C bluepy -j1" ]:
+        for cmd in [ "make -C ./bluepy_mjg59 clean", "make -C bluepy_mjg59 -j1" ]:
             print("execute " + cmd)
             msgs = subprocess.check_output(shlex.split(cmd), stderr=subprocess.STDOUT)
     except subprocess.CalledProcessError as e:
@@ -51,7 +51,7 @@ except ImportError:
 
 
 setup (
-    name='bluepy',
+    name='bluepy_mjg59',
     version=VERSION,
     description='Python module for interfacing with BLE devices through Bluez',
     author='Ian Harvey',
@@ -64,17 +64,17 @@ setup (
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
     ],
-    packages=['bluepy'],
+    packages=['bluepy_mjg59'],
     
     package_data={
-        'bluepy': ['bluepy-helper', '*.json', 'bluez-src.tgz', 'bluepy-helper.c', 'version.h', 'Makefile']
+        'bluepy_mjg59': ['bluepy-helper', '*.json', 'bluez-src.tgz', 'bluepy-helper.c', 'version.h', 'Makefile']
     },
     cmdclass=setup_cmdclass,
     entry_points={
         'console_scripts': [
-            'thingy52=bluepy.thingy52:main',
-            'sensortag=bluepy.sensortag:main',
-            'blescan=bluepy.blescan:main',
+            'thingy52=bluepy_mjg59.thingy52:main',
+            'sensortag=bluepy_mjg59.sensortag:main',
+            'blescan=bluepy_mjg59.blescan:main',
         ]
     }
 )

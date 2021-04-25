@@ -36,7 +36,7 @@ $(IMPORT_SRCS): bluez-src.tgz
 .PHONY: bluez-tarfile
 
 bluez-tarfile:
-	(cd ..; tar czf bluepy/bluez-src.tgz $(BLUEZ_PATH))
+	(cd ..; tar czf bluepy_mjg59/bluez-src.tgz $(BLUEZ_PATH))
 
 GET_SERVICES=get_services.py
 
